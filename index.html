@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia Gigante de LaLiga - Proyecto Trimestral</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <table id="layout-principal">
+        <thead>
+            <tr>
+                <td colspan="2">
+                    <header>
+                        <h1>🏟️ El Olimpo del Fútbol Español: Historias y Leyendas</h1>
+                        <p class="descripcion">Bienvenidos al sitio web más completo sobre la Liga Española. Sumérgete en historias épicas, récords inigualables y la cultura de los clubes que hacen de LaLiga un fenómeno mundial.</p>
+                    </header>
+                    <nav>
+                        <a href="index.html">Inicio (Grandes Equipos)</a> |
+                        <a href="galeria_img.html">Galería Épica de Imágenes</a> |
+                        <a href="galeria_vid.html">Momentos Clave en Video</a> |
+                        <a href="contacto.html">Contacto con el Editor</a>
+                    </nav>
+                    <hr>
+                </td>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td id="columna-contenido">
+
+                    <h2>📋 Récords y Palmarés Histórico</h2>
+                    <table id="tabla-records">
+                        <thead>
+                            <tr>
+                                <th>Club</th>
+                                <th>Ligas Ganadas</th>
+                                <th>Máximo Goleador Histórico</th>
+                                <th>Partidos Jugados en Primera</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Real Madrid C.F.</td><td>36</td><td>Cristiano Ronaldo (311)</td><td>Más de 2900</td></tr>
+                            <tr><td>F.C. Barcelona</td><td>27</td><td>Lionel Messi (474)</td><td>Más de 2900</td></tr>
+                            <tr><td>Atlético de Madrid</td><td>11</td><td>Adrián Escudero (150)</td><td>Más de 2800</td></tr>
+                            <tr><td>Athletic Club</td><td>8</td><td>Telmo Zarra (251)</td><td>Más de 2900</td></tr>
+                            <tr><td>Valencia C.F.</td><td>6</td><td>Edmundo Suárez 'Mundo' (186)</td><td>Más de 2700</td></tr>
+                            <tr><td>Real Sociedad</td><td>2</td><td>Jesús María Satrústegui (133)</td><td>Más de 2400</td></tr>
+                            <tr><td>Deportivo La Coruña</td><td>1</td><td>Bebeto (86)</td><td>Más de 1700</td></tr>
+                        </tbody>
+                    </table>
+                    
+                    <hr>
+
+                    <section id="equipo-madrid">
+                        <h3>👑 Real Madrid C.F.: La Leyenda de las Copas de Europa</h3>
+                        
+                        <div class="equipo-flex-container">
+                            
+                            <div class="equipo-texto">
+                                <p><strong>Fundación:</strong> 1902. <strong>Estadio:</strong> Santiago Bernabéu. <strong>Colores:</strong> Blanco. El Real Madrid no es solo un club de fútbol, es una institución global que simboliza el éxito y la realeza deportiva. Su historia está intrínsecamente ligada a la Copa de Europa, donde ostentan un récord inalcanzable de títulos. La época de Alfredo Di Stéfano en los 50 estableció la hegemonía, mientras que la era moderna, con las múltiples Ligas de Campeones ganadas bajo la dirección de jugadores como Zidane y Cristiano Ronaldo, cimentó su estatus como el club más grande del siglo XX y XXI. La narrativa de los "Galácticos" de principios de los 2000, aunque breve, marcó una revolución en el marketing deportivo. Sus rivalidades con el Barcelona (El Clásico) y el Atlético de Madrid son el motor emocional de la temporada. Su palmarés incluye 36 Ligas y 15 Copas de Europa, lo que lo convierte en el equipo más laureado de España y del mundo.</p>
+                                <p><strong>Detalle Extenso de la Historia:</strong> La década de los 80, con la "Quinta del Buitre" (Butragueño, Míchel, Sanchís, Martín Vázquez y Pardeza), dominó LaLiga con cinco títulos consecutivos, demostrando una cantera excepcional. La remodelación constante del Bernabéu y la ambición de su directiva mantienen al club siempre en la vanguardia. El Madrid no solo busca ganar; busca hacerlo con estilo, manteniendo una tradición ofensiva y de fichajes estelares que resuena en todo el planeta. La reciente era de Luka Modric y Toni Kroos, con su control magistral del mediocampo, es una prueba de que la calidad técnica prevalece.</p>
+                            </div>
+                            
+                            <div class="carrusel-leyendas-container">
+                                <h4>Leyendas Blancas</h4>
+                                <div class="carrusel-leyendas" id="madrid-carrusel">
+                                    <div class="leyenda-slide">
+                                        <img src="madrid_leyenda1.jpg" alt="Alfredo Di Stéfano">
+                                        <p>Di Stéfano: La Saeta Rubia</p>
+                                    </div>
+                                    <div class="leyenda-slide">
+                                        <img src="madrid_leyenda2.jpg" alt="Zinedine Zidane">
+                                        <p>Zidane: Magia y Elegancia</p>
+                                    </div>
+                                    <div class="leyenda-slide">
+                                        <img src="madrid_leyenda3.jpg" alt="Cristiano Ronaldo">
+                                        <p>CR7: La Máquina de Goles</p>
+                                    </div>
+                                    <a class="prev-small" onclick="cambiarLeyenda(1, -1)">&#10094;</a>
+                                    <a class="next-small" onclick="cambiarLeyenda(1, 1)">&#10095;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <hr>
+
+                    <section id="equipo-barcelona">
+                        <h3>🔵🔴 F.C. Barcelona: Més Que Un Club y la Filosofía del 'Tiki-Taka'</h3>
+                        
+                        <div class="equipo-flex-container">
+
+                            <div class="equipo-texto">
+                                <p><strong>Fundación:</strong> 1899. <strong>Estadio:</strong> Camp Nou (Actual: Estadio Olímpico Lluís Companys). <strong>Colores:</strong> Azul y Grana. El Barcelona representa la identidad catalana y su lema, "Més Que Un Club" (Más que un Club), encapsula su dimensión social y política. Históricamente, el club luchó contra la hegemonía del Madrid, pero el punto de inflexión llegó con la llegada de Johan Cruyff, primero como jugador en los 70 y luego como entrenador en los 90, con su "Dream Team" y la conquista de la primera Copa de Europa en 1992. Su metodología se basa en La Masia, su academia, que nutre al primer equipo con talentos formados en el estilo de toque y posesión, culminando en la era dorada de Pep Guardiola (2008-2012) con el famoso 'Tiki-Taka', liderado por Xavi, Iniesta y Lionel Messi, considerado por muchos como el mejor jugador de la historia. El legado de Messi, con 474 goles en liga, es irrompible.</p>
+                                <p><strong>Detalle Extenso de la Historia:</strong> La visión de Cruyff no solo trajo títulos, sino que instauró un modelo de juego que se convirtió en una marca de identidad global. La era de Frank Rijkaard sentó las bases con Ronaldinho, pero fue la tripleta de Guardiola la que alcanzó la perfección, ganando un histórico 'sextete' en 2009. A pesar de los desafíos financieros recientes, la filosofía de cantera sigue siendo el pilar de su futuro. El debate sobre el 'Tiki-Taka' y su evolución sigue siendo el tema central de cualquier análisis táctico en el fútbol moderno.</p>
+                            </div>
+
+                            <div class="carrusel-leyendas-container">
+                                <h4>Leyendas Blaugranas</h4>
+                                <div class="carrusel-leyendas" id="barcelona-carrusel">
+                                    <div class="leyenda-slide">
+                                        <img src="barca_leyenda1.jpg" alt="Johan Cruyff">
+                                        <p>Cruyff: El Innovador</p>
+                                    </div>
+                                    <div class="leyenda-slide">
+                                        <img src="barca_leyenda2.jpg" alt="Xavi Hernández">
+                                        <p>Xavi: El Cerebro del Tiki-Taka</p>
+                                    </div>
+                                    <div class="leyenda-slide">
+                                        <img src="barca_leyenda3.jpg" alt="Lionel Messi">
+                                        <p>Messi: El GOAT Azulgrana</p>
+                                    </div>
+                                    <a class="prev-small" onclick="cambiarLeyenda(2, -1)">&#10094;</a>
+                                    <a class="next-small" onclick="cambiarLeyenda(2, 1)">&#10095;</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <hr>
+
+                    <section id="equipo-atletico">
+                        <h3>🐺 Atlético de Madrid: El 'Pupas' que se Convirtió en Guerrero</h3>
+                        
+                        <div class="equipo-flex-container">
+
+                            <div class="equipo-texto">
+                                <p><strong>Fundación:</strong> 1903. <strong>Estadio:</strong> Cívitas Metropolitano. <strong>Colores:</strong> Rojo y Blanco. Conocidos como los "Colchoneros", el Atlético siempre ha representado la pasión, el sufrimiento y la resiliencia. Durante mucho tiempo fueron el "Pupas" (el gafado), un equipo capaz de lo mejor y lo peor. Sin embargo, su historia reciente está marcada por la llegada de Diego Pablo Simeone como entrenador en 2011. El 'Cholo' impuso una filosofía basada en el esfuerzo, la defensa férrea y el lema "Nunca dejes de creer". Este estilo, a menudo llamado 'Cholismo', les permitió romper la dictadura de Madrid y Barcelona, ganando LaLiga en 2014 y 2021. Son un ejemplo de cómo la intensidad y la táctica pueden superar el poder económico. Sus delanteros (Falcao, Griezmann, Forlán) siempre han sido figuras clave, combinando potencia y habilidad.</p>
+                                <p><strong>Detalle Extenso de la Historia:</strong> Antes de Simeone, el Atlético vivió épocas gloriosas, como la Liga y Copa ganadas en 1996 con Radomir Antić, un doblete recordado con fervor por la afición. No obstante, también sufrieron un doloroso descenso a Segunda División a inicios del 2000. Este vaivén de emociones es parte de su encanto. La reconstrucción del equipo en su nuevo estadio, el Cívitas Metropolitano, simboliza su salto a la élite europea, aunque la espina clavada de no haber ganado nunca la Liga de Campeones (con tres finales perdidas, dos contra el Real Madrid) sigue siendo un motor para la afición.</p>
+                            </div>
+
+                            <div class="carrusel-leyendas-container">
+                                <h4>Leyendas Colchoneras</h4>
+                                <div class="carrusel-leyendas" id="atletico-carrusel">
+                                    <div class="leyenda-slide">
+                                        <img src="atleti_leyenda1.jpg" alt="Luis Aragonés">
+                                        <p>Aragonés: El Sabio de Hortaleza</p>
+                                    </div>
+                                    <div class="leyenda-slide">
+                                        <img src="atleti_leyenda2.jpg" alt="Fernando Torres">
+                                        <p>Torres: El Niño Icono</p>
+                                    </div>
+                                    <div class="leyenda-slide">
+                                        <img src="atleti_leyenda3.jpg" alt="Diego Godín">
+                                        <p>Godín: Corazón de León</p>
+                                    </div>
+                                    <a class="prev-small" onclick="cambiarLeyenda(3, -1)">&#10094;</a>
+                                    <a class="next-small" onclick="cambiarLeyenda(3, 1)">&#10095;</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <hr>
+
+                    <h2>🎬 Video y Exposición: El Factor Histórico de LaLiga</h2>
+                    <div class="video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Ejemplo-de-video-historia-liga" frameborder="0" allowfullscreen></iframe>
+                        <p class="video-texto"><strong>Texto Explicativo Extenso:</strong> La exposición presentada en este sitio se centra en la evolución de LaLiga de una competición regional a un espectáculo global. Factores como el crecimiento de las televisiones, la Ley Bosman y la inversión extranjera han transformado la competición, haciéndola atractiva para millones de espectadores. El fútbol español, con su énfasis en la técnica sobre lo físico, ha dictado tendencias tácticas mundiales durante la última década. El impacto económico de estos clubes en la economía española es monumental, generando miles de empleos y atrayendo turismo deportivo de élite. La rivalidad constante es el motor que impulsa la excelencia.</p>
+                    </div>
+
+                </td>
+                
+                <td id="columna-carrusel">
+                    <h2>📸 Momentos de Pasión</h2>
+                    <div class="carrusel-container">
+                        <div class="carrusel-slide">
+                            <img src="imagen1.jpg" alt="Final de la Copa del Rey">
+                            <div class="caption">Celebración de un título.</div>
+                        </div>
+                        <div class="carrusel-slide">
+                            <img src="imagen2.jpg" alt="Estadio Metropolitano Lleno">
+                            <div class="caption">Ambiente en el Cívitas Metropolitano.</div>
+                        </div>
+                        <div class="carrusel-slide">
+                            <img src="imagen3.jpg" alt="Derby Vasco">
+                            <div class="caption">Acción intensa en el Derby Vasco.</div>
+                        </div>
+                        <a class="prev" onclick="cambiarSlide(-1)">&#10094;</a>
+                        <a class="next" onclick="cambiarSlide(1)">&#10095;</a>
+                    </div>
+                    <div id="caja-historia-general">
+    <h2>📜 Profundizando: La Historia General de LaLiga</h2>
+    <p>La **Liga Nacional de Fútbol** fue fundada en **1929** y, a diferencia de otras ligas europeas, históricamente ha sido dominada por solo dos clubes principales: Real Madrid y F.C. Barcelona. Sin embargo, su complejidad reside en la variedad de culturas futbolísticas regionales (Vasco, Catalán, Andaluz, etc.) que alimentan una pasión inigualable. LaLiga es considerada una de las cinco grandes ligas europeas (Big Five) y su coeficiente UEFA suele estar en el top 3.</p>
+
+    <h3>Trofeos y Competiciones Asociadas</h3>
+    <p>Aunque LaLiga (el campeonato de liga regular) es el trofeo más prestigioso a nivel nacional, la pasión se extiende a otras competiciones oficiales que completan el calendario de los equipos españoles:</p>
+    
+    <ul>
+        <li>
+            <h4>🏆 Copa del Rey (Copa de S.M. El Rey)</h4>
+            <p>Es la competición de eliminación directa más antigua de España. Es famosa por las "sorpresas" (mata-gigantes) y por ser el escenario donde equipos de divisiones inferiores se enfrentan a los grandes. El ganador se clasifica para la UEFA Europa League y la Supercopa de España. El Athletic Club y el F.C. Barcelona son históricamente los máximos ganadores.</p>
+        </li>
+        <li>
+            <h4>🥇 Supercopa de España</h4>
+            <p>Originalmente enfrentaba al campeón de Liga contra el campeón de la Copa del Rey. Desde 2020, se juega con un formato de 'Final Four' (cuatro equipos) a principios de año en una sede neutral (a menudo fuera de España) e involucra a los dos primeros clasificados de LaLiga y los dos finalistas de la Copa del Rey. Es una competición reciente con un gran impacto económico.</p>
+        </li>
+        <li>
+            <h4>⚽ Segunda División (LaLiga Hypermotion)</h4>
+            <p>Es la segunda categoría profesional. Los dos primeros equipos ascienden directamente a Primera División, y los siguientes cuatro juegan un 'play-off' por la última plaza de ascenso. Es una liga extremadamente competitiva y crucial para la base del fútbol español.</p>
+        </li>
+    </ul>
+
+    <p style="font-style: italic;">La historia de LaLiga no se mide solo en puntos, sino en la rica tradición de sus clubes y la importancia de estos trofeos secundarios en la identidad de cada región.</p>
+</div>
+                </td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="2">
+                    <footer>
+                        <p>Documentación de Proyecto Front End 2025. | Creado con HTML5, CSS3 y JavaScript. | <a href="#">Aviso Legal</a></p>
+                    </footer>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script src="script.js"></script> 
+</body>
+</html>

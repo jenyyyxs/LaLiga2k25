@@ -1,0 +1,456 @@
+/* --- Estilos Generales y Layout --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9ecef; /* Fondo claro general */
+    color: #212529;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Estructura principal de tabla para layout */
+#layout-principal {
+    width: 95%; /* Más ancho para el contenido masivo */
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#layout-principal td {
+    padding: 25px;
+    border: 1px solid #dee2e6;
+    vertical-align: top;
+}
+
+/* Cabecera, Títulos y Navegación */
+header {
+    background: linear-gradient(90deg, #004d98, #ff6600); /* Colores de LaLiga */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 { font-size: 2.5em; margin-bottom: 5px; }
+h2 { color: #004d98; border-bottom: 2px solid #ff6600; padding-bottom: 5px; }
+h3 { margin-top: 0; font-size: 1.8em; }
+
+nav { padding: 10px 0; text-align: center; background-color: #f8f9fa; }
+nav a {
+    color: #004d98;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+nav a:hover { color: #ff6600; }
+
+/* --- Tabla de Récords - Colores Vivos y Vibrantes --- */
+#tabla-records {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    text-align: left;
+    /* Sombra para que la tabla destaque del fondo */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+    border-radius: 5px; /* Esquinas ligeramente redondeadas */
+    overflow: hidden; /* Asegura que la sombra y borde se apliquen correctamente */
+}
+
+#tabla-records th, #tabla-records td {
+    border: 1px solid #d4e7f8; /* Borde muy claro */
+    padding: 15px; /* Más padding para mayor impacto */
+}
+
+/* Encabezado: Azul Fuerte de LaLiga */
+#tabla-records th {
+    background-color: #004d98;
+    color: white;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+/* Filas Pares: Naranja Suave (Color secundario de LaLiga) */
+#tabla-records tbody tr:nth-child(even) {
+    background-color: #fff0e0; 
+    color: #333;
+}
+
+/* Filas Impares: Blanco Puro (Alto contraste) */
+#tabla-records tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+    color: #111;
+}
+
+/* Efecto Hover: Dorado/Amarillo Intenso para resaltar la fila */
+#tabla-records tbody tr:hover {
+    background-color: #ffd700; /* Dorado brillante */
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* --- ESTILOS DE EQUIPOS CON DEGRADADOS FUERTES --- */
+section {
+    padding: 30px; /* Aumentamos el padding para que el color luzca más */
+    margin: 25px 0;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    font-size: 1.1em; /* Texto un poco más grande */
+    color: #000; /* Texto oscuro para asegurar legibilidad */
+}
+
+/* 👑 Real Madrid: Degradado Blanco y Violeta Intenso */
+#equipo-madrid {
+    /* Degradado de Blanco Puro a Violeta Intenso */
+    background-image: linear-gradient(135deg, #ffffff 0%, #d8bfd8 50%, #8a2be2 100%);
+    border: 5px solid #4a0082; /* Borde oscuro para contraste */
+}
+#equipo-madrid h3 {
+    color: #4a0082; /* Título en color Púrpura */
+    border-bottom: 2px solid #8a2be2;
+    padding-bottom: 5px;
+}
+
+/* 🔵🔴 F.C. Barcelona: Degradado Azul y Grana Potente */
+#equipo-barcelona {
+    /* Degradado de un Azul Fuerte a un Grana Profundo */
+    background-image: linear-gradient(135deg, #004a99 0%, #1a74b8 50%, #c40a35 100%);
+    color: #fff; /* CAMBIO DE COLOR DE TEXTO: Blanco para contraste en fondo oscuro */
+    border: 5px solid #5a002b; 
+}
+#equipo-barcelona p, #equipo-barcelona strong {
+    color: #fff; /* Aseguramos que todo el texto sea blanco */
+}
+#equipo-barcelona h3 {
+    color: #ffe000; /* Título en color Amarillo/Dorado para destacar */
+    border-bottom: 2px solid #ffe000;
+    padding-bottom: 5px;
+}
+
+/* 🐺 Atlético de Madrid: Degradado Rojiblanco con intensidad */
+#equipo-atletico {
+    /* Degradado de un Blanco Suave a un Rojo Colchonero */
+    background-image: linear-gradient(135deg, #f0f0f0 0%, #e7e7e7 50%, #dc3545 100%);
+    border: 5px solid #a91f24; /* Borde Rojo oscuro */
+}
+#equipo-atletico h3 {
+    color: #a91f24; /* Título en color Rojo Profundo */
+    border-bottom: 2px solid #dc3545;
+    padding-bottom: 5px;
+}
+
+/* --- Carrusel (Columna Derecha) --- */
+#columna-carrusel {
+    width: 35%; /* Menor ancho para la columna del carrusel */
+    background-color: #f4f4f4;
+    position: relative;
+}
+
+.carrusel-container {
+    position: relative;
+    max-width: 100%;
+    margin: 15px 0;
+    overflow: hidden;
+    border: 5px solid #ff6600; /* Borde Naranja para destacar */
+}
+
+.carrusel-slide {
+    display: none;
+    text-align: center;
+}
+
+.carrusel-slide img {
+    /* Clave: Sin Zoom y Centrado */
+    width: 100%;
+    height: 400px; /* Mayor altura para mayor impacto visual */
+    object-fit: contain; /* Ajusta la imagen DENTRO del contenedor sin recortar (SIN ZOOM) */
+    display: block;
+    margin: 0 auto;
+    background-color: #000; /* Fondo negro para el contraste de las fotos */
+}
+
+.caption {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Controles de navegación */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 18px;
+    margin-top: -25px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    background-color: rgba(255, 102, 0, 0.7); /* Naranja semi-transparente */
+    border-radius: 0 5px 5px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 5px 0 0 5px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(255, 102, 0, 1);
+}
+
+/* Pie de página */
+footer {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 0.85em;
+}
+footer a { color: #ff6600; text-decoration: none; }
+
+/* --- NUEVOS ESTILOS PARA CARRUSELES DE LEYENDAS (Pequeños) --- */
+
+/* Contenedor Flex para Texto y Carrusel dentro de cada SECCIÓN */
+.equipo-flex-container {
+    display: flex;
+    gap: 25px; /* Espacio entre el texto y el carrusel */
+    align-items: flex-start; /* Alinea los ítems arriba */
+}
+
+.equipo-texto {
+    flex: 2; /* El texto ocupa 2/3 del espacio */
+    min-width: 60%; 
+}
+
+/* Contenedor del Carrusel de Leyendas (fijo) */
+.carrusel-leyendas-container {
+    flex: 1; /* El carrusel ocupa 1/3 del espacio */
+    max-width: 300px; /* Tamaño máximo fijo para evitar colisiones */
+    text-align: center;
+    padding-top: 20px;
+}
+
+.carrusel-leyendas-container h4 {
+    color: inherit; /* Hereda el color del equipo */
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.carrusel-leyendas {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border: 3px solid #ccc; /* Borde más discreto */
+    border-radius: 5px;
+}
+
+.leyenda-slide {
+    display: none;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+.leyenda-slide img {
+    /* La clave: sin zoom, centrado, y tamaño fijo */
+    width: 100%;
+    height: 200px; /* Altura más pequeña para no chocar */
+    object-fit: contain; /* Sin zoom */
+    display: block;
+    margin: 0 auto;
+}
+
+.leyenda-slide p {
+    margin: 0;
+    padding: 8px 0;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+/* Controles de navegación de los carruseles pequeños */
+.prev-small, .next-small {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    z-index: 10;
+}
+
+.next-small {
+    right: 0;
+}
+.prev-small {
+    left: 0;
+}
+
+.prev-small:hover, .next-small:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* --- NUEVA CAJA DE CONTENIDO GENERAL EN LA COLUMNA DERECHA --- */
+
+/* --- NUEVA CAJA DE CONTENIDO GENERAL EN LA COLUMNA DERECHA CON DEGRADADO --- */
+
+#caja-historia-general {
+    margin-top: 30px;
+    padding: 25px;
+    /* Degradado vibrante de Azul LaLiga a Naranja/Dorado */
+    background-image: linear-gradient(160deg, #004d98 0%, #337ab7 50%, #ff6600 100%); 
+    
+    border: 3px solid #ff6600; /* Borde naranja fuerte */
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    color: #fff; /* CAMBIO CLAVE: Texto blanco para contraste */
+}
+
+#caja-historia-general h2,
+#caja-historia-general h3,
+#caja-historia-general p,
+#caja-historia-general ul li {
+    color: white; /* Aseguramos que todo el texto sea blanco */
+}
+
+#caja-historia-general h2 {
+    /* El borde inferior será en color Dorado/Amarillo para alto contraste */
+    border-bottom: 2px dashed #ffe000; 
+    padding-bottom: 10px;
+    font-size: 1.6em;
+}
+
+#caja-historia-general h3 {
+    /* El título de las subsecciones será en Dorado brillante */
+    color: #ffd700; 
+    margin-top: 20px;
+    font-size: 1.3em;
+}
+
+#caja-historia-general ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* Estilo para los ítems de la lista (Trofeos) */
+#caja-historia-general ul li {
+    /* Fondo ligeramente transparente para que se vea el degradado del fondo, pero se lea el texto */
+    background-color: rgba(0, 0, 0, 0.2); 
+    padding: 12px;
+    margin-bottom: 10px;
+    border-left: 5px solid #ffd700; /* Línea de color Dorado */
+    border-radius: 5px;
+}
+
+/* ========================================================= */
+/* --- ESTILOS ESPECÍFICOS PARA LAS GALERÍAS (IMG y VID) --- */
+/* ========================================================= */
+
+#galeria-seccion {
+    /* Fondo general sutil para la sección de galería */
+    background-color: #f8f9fa;
+    padding: 30px;
+}
+
+#galeria-seccion h2 {
+    /* Estilo de título fuerte */
+    color: #004d98; 
+    border-bottom: 3px solid #ff6600;
+    margin-bottom: 25px;
+}
+
+/* --- GRID DE IMÁGENES --- */
+.grid-galeria {
+    display: grid;
+    /* 3 columnas fluidas que se ajustan al ancho */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 10px;
+}
+
+.item-galeria {
+    /* Degradado Naranja/Dorado en el fondo */
+    background-image: linear-gradient(135deg, #ff6600 0%, #ffd700 100%); 
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease;
+    border: 3px solid #004d98;
+}
+
+.item-galeria:hover {
+    transform: scale(1.05); /* Zoom ligero al pasar el ratón */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.item-galeria img {
+    width: 100%;
+    height: 250px; 
+    object-fit: cover; /* Cubre el contenedor (con zoom leve, pero es un diseño de galería) */
+    display: block;
+}
+
+.item-galeria p {
+    padding: 10px;
+    margin: 0;
+    /* Fondo del texto en Blanco puro para legibilidad */
+    background-color: white; 
+    text-align: center;
+    font-weight: bold;
+    color: #004d98;
+    border-top: 1px solid #ff6600;
+}
+
+
+/* --- GRID DE VIDEOS --- */
+.grid-videos {
+    display: grid;
+    /* 2 columnas más anchas para los videos */
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 30px;
+    padding: 10px;
+}
+
+.video-item {
+    /* Degradado Inverso (Azul a Naranja) para diferenciarse de las imágenes */
+    background-image: linear-gradient(135deg, #004d98 0%, #337ab7 100%);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    color: white; /* Texto blanco sobre el fondo oscuro */
+    border: 3px solid #ff6600;
+}
+
+.video-item iframe {
+    width: 100%;
+    height: 280px; 
+    border: 5px solid white; /* Marco blanco al video */
+    border-radius: 5px;
+}
+
+.video-item h4 {
+    color: #ffd700; /* Título en Dorado */
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #ffd700;
+    padding-bottom: 5px;
+    font-size: 1.2em;
+}
+
+.video-item p {
+    font-size: 0.95em;
+    color: #e0e0e0;
+}

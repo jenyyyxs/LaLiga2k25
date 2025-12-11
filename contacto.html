@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Historia Gigante de LaLiga</title>
+    <link rel="stylesheet" href="style.css"> 
+    
+    <style>
+        /* Estilo del contenedor del formulario similar a las secciones de equipos */
+        #seccion-contacto {
+            background-color: white;
+            border: 3px solid #004d98; /* Borde Azul LaLiga */
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilos de los inputs y labels */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #004d98;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            font-size: 1em;
+            box-sizing: border-box; /* Para que el padding no rompa el ancho */
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .form-group input:focus, 
+        .form-group select:focus, 
+        .form-group textarea:focus {
+            border-color: #ff6600; /* Foco Naranja */
+            outline: none;
+            box-shadow: 0 0 8px rgba(255, 102, 0, 0.3);
+        }
+
+        /* Botón de envío llamativo */
+        .btn-enviar {
+            background-image: linear-gradient(135deg, #ff6600 0%, #ffd700 100%); /* Degradado Naranja a Dorado */
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border-bottom: 4px solid #cc5200; /* Efecto 3D */
+        }
+
+        .btn-enviar:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 102, 0, 0.4);
+        }
+
+        .btn-enviar:active {
+            transform: translateY(2px);
+            border-bottom: 2px solid #cc5200;
+        }
+
+        /* Caja de información lateral (reutilizando estilo del index pero ajustado) */
+        .info-contacto-box {
+            background-image: linear-gradient(160deg, #004d98 0%, #337ab7 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            border: 3px solid #ff6600;
+            margin-bottom: 20px;
+        }
+        
+        .info-contacto-box h3 {
+            color: #ffd700;
+            border-bottom: 1px dashed #ffd700;
+            padding-bottom: 10px;
+        }
+
+        .info-item {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .info-item span {
+            font-size: 1.2em;
+            margin-right: 10px;
+        }
+        
+        .mapa-container iframe {
+            width: 100%;
+            height: 300px;
+            border: 3px solid #004d98;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <table id="layout-principal">
+        <thead>
+            <tr>
+                <td colspan="2">
+                    <header>
+                        <h1>📩 Contacto con la Redacción</h1>
+                        <p class="descripcion">¿Tienes datos históricos, correcciones o sugerencias? Queremos escuchar a los verdaderos fanáticos de LaLiga.</p>
+                    </header>
+                    <nav>
+                        <a href="index.html">Inicio (Grandes Equipos)</a> |
+                        <a href="galeria_img.html">Galería Épica de Imágenes</a> |
+                        <a href="galeria_vid.html">Momentos Clave en Video</a> |
+                        <a href="contacto.html" style="color: #ff6600; text-decoration: underline;">Contacto con el Editor</a>
+                    </nav>
+                    <hr>
+                </td>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td id="columna-contenido">
+                    
+                    <h2>✍️ Formulario de Contacto</h2>
+                    
+                    <section id="seccion-contacto">
+                        <p>Rellena el siguiente formulario para ponerte en contacto con el equipo de <strong>Historia Gigante de LaLiga</strong>. Responderemos lo antes posible.</p>
+                        
+                        <form action="#" method="post">
+                            <div class="form-group">
+                                <label for="nombre">Nombre Completo:</label>
+                                <input type="text" id="nombre" name="nombre" placeholder="Ej: Andrés Iniesta" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Correo Electrónico:</label>
+                                <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="equipo">¿Cuál es tu equipo favorito?</label>
+                                <select id="equipo" name="equipo">
+                                    <option value="" disabled selected>Selecciona un club...</option>
+                                    <option value="real_madrid">Real Madrid C.F.</option>
+                                    <option value="barcelona">F.C. Barcelona</option>
+                                    <option value="atletico">Atlético de Madrid</option>
+                                    <option value="athletic">Athletic Club</option>
+                                    <option value="valencia">Valencia C.F.</option>
+                                    <option value="otro">Otro / Soy imparcial</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="asunto">Asunto:</label>
+                                <input type="text" id="asunto" name="asunto" placeholder="Ej: Sugerencia sobre estadísticas" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="mensaje">Tu Mensaje:</label>
+                                <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribe aquí tu consulta, anécdota o corrección..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-enviar">🚀 Enviar Mensaje</button>
+                        </form>
+                    </section>
+
+                </td>
+                
+                <td id="columna-carrusel">
+                    
+                    <h2>📍 Dónde Encontrarnos</h2>
+                    
+                    <div class="info-contacto-box">
+                        <h3>Oficina de Edición</h3>
+                        <p>Aunque nuestra pasión está en los estadios, nuestra base de datos central se gestiona desde:</p>
+                        
+                        <div class="info-item">
+                            <span>🏢</span> <strong>Dirección:</strong><br>
+                             Calle del Fútbol, 10<br>
+                             28001, Madrid, España
+                        </div>
+                        
+                        <div class="info-item">
+                            <span>📧</span> <strong>Email:</strong><br>
+                             contacto@historialiga.es
+                        </div>
+                        
+                        <div class="info-item">
+                            <span>📞</span> <strong>Teléfono:</strong><br>
+                             +34 91 123 45 67
+                        </div>
+                    </div>
+
+                    <div class="carrusel-container" style="border: none;">
+                        <div class="mapa-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194348.1398106637!2d-3.819620668853683!3d40.43786975949514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422997800a3c81%3A0xc436dec1618c2269!2sMadrid%2C%20Spain!5e0!3m2!1sen!2sus!4v1625687451234!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <div class="caption" style="position: relative; background: #004d98; margin-top: -5px;">Nuestra ubicación central en Madrid.</div>
+                    </div>
+
+                    <div id="caja-historia-general" style="margin-top: 20px;">
+                        <h3>📢 Nota para colaboradores</h3>
+                        <p>Si deseas enviar material gráfico (fotos antiguas o videos) para las galerías, por favor indica en el asunto "Material Gráfico" y adjunta un enlace de descarga.</p>
+                    </div>
+
+                </td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="2">
+                    <footer>
+                        <p>Documentación de Proyecto Front End 2025. | Creado con HTML5, CSS3 y JavaScript. | <a href="#">Aviso Legal</a></p>
+                    </footer>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script src="script.js"></script> 
+</body>
+</html>
