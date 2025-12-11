@@ -110,6 +110,30 @@
             border: 3px solid #004d98;
             border-radius: 10px;
         }
+
+        /* Nuevo estilo para la caja de integrantes (reutiliza el estilo de #caja-historia-general, pero con borde naranja y fondo blanco) */
+        #caja-integrantes {
+            margin-top: 30px;
+            padding: 25px;
+            background-color: white; /* Fondo blanco */
+            border: 3px solid #ff6600; /* Borde Naranja */
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            color: #004d98; /* Texto principal en azul */
+        }
+        
+        #caja-integrantes h3 {
+            color: #ff6600; /* Título en Naranja */
+            border-bottom: 2px solid #004d98; /* Borde inferior azul */
+            padding-bottom: 10px;
+            font-size: 1.5em;
+        }
+        
+        .integrante-item {
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
     </style>
 </head>
 <body>
@@ -213,7 +237,18 @@
                         </div>
                         <div class="caption" style="position: relative; background: #004d98; margin-top: -5px;">Nuestra ubicación central en Madrid.</div>
                     </div>
-
+                    
+                    <div id="caja-integrantes">
+                        <h3>Equipo Detrás de la Historia 💻</h3>
+                        <p>Este proyecto Front-End ha sido un tributo a la rica historia de LaLiga, diseñado y desarrollado con la pasión de un Clásico. Esperamos que disfrutes de este viaje visual y estadístico a través de los gigantes del fútbol español.</p>
+                        
+                        <h4>Desarrolladores:</h4>
+                        <ul>
+                            <li class="integrante-item">⚽ Bryan Quiñones</li>
+                            <li class="integrante-item">🏆 Alexander Pinto</li>
+                            <li class="integrante-item">⭐ Jennifer Cisneros</li>
+                        </ul>
+                    </div>
                     <div id="caja-historia-general" style="margin-top: 20px;">
                         <h3>📢 Nota para colaboradores</h3>
                         <p>Si deseas enviar material gráfico (fotos antiguas o videos) para las galerías, por favor indica en el asunto "Material Gráfico" y adjunta un enlace de descarga.</p>
